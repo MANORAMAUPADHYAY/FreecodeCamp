@@ -1,0 +1,443 @@
+
+<html lang="en"><head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - FCC: Product Landing Page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style>
+    @import "https://fonts.googleapis.com/css?family=Lato:400,700";
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+  font-family: 'Lato', sans-serif;
+}
+        #page-wrapper {
+  position: relative;
+}
+        li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  width: 60vw;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+
+nav {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+}
+
+#hero > h2 {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+#hero input[type="email"] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+}
+
+#hero input[type="submit"] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color: #f1c40f;
+}
+
+#hero input[type="submit"]:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 120px;
+  }
+}
+
+#features {
+  margin-top: 30px;
+}
+
+#features .icon>img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0;
+  }
+}
+
+#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#how-it-works > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100%  / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.product > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #f1c40f;
+  font-weight: 400;
+}
+
+.product > button:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
+    
+    
+    
+    
+    </style>
+    
+    
+    
+    </head>
+<body>
+<div id="page-wrapper">
+  <header id="header">
+    <div class="logo">
+    <img  id="header-img" src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="logoimage">
+         </div>
+    <nav id="nav-bar">
+      <ul>
+        <li>
+            <a class="nav-link" href="#features">Features</a></li>
+          <li>
+              <a class="nav-link" href="#how-it-works">How it Works</a>
+        </li>
+            <li>
+                <a class="nav-link" href="#pricing">Pricing</a>
+        </li>
+          </ul>
+    </nav>
+ </header>
+    <div class="container"></div>
+      <section id="hero">
+        <h2>Handcrafted, home made masterpieces</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input id="email" name="email" type="email" placeholder="Enter your email" required>
+          <input id="submit" type="submit"  value="Get Started" class="btn">
+        </form>
+       </section>
+      <div class="container">
+        <section id="features">
+          <div class="grid">
+          <div class="icon">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbnkgJ9XTkuq6Fw8pf5xxE3dOJhDLuSkyNRg&usqp=CAU">
+          </div>
+          <div class="desc">
+            <h2> Premium Materials</h2>
+            <p>
+Our trombones use the shiniest brass which is sourced locally. This
+will increase the longevity of your purchase.</p>
+          </div>
+             </div>
+              <div class="grid">
+          <div class="icon">
+           <img src="https://cdn1.vectorstock.com/i/1000x1000/09/70/fast-shipping-icon-vector-24390970.jpg">
+          </div>
+          <div class="desc">
+            <h2> Fast Shipping</h2>
+            <p>
+
+We make sure you recieve your trombone as soon as we have finished
+making it. We also provide free returns if you are not satisfied..</p>
+          </div>
+             </div>
+              <div class="grid">
+          <div class="icon">
+           <img src="data:image/png;base64,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">
+          </div>
+          <div class="desc">
+            <h2> Quality Assurance</h2>
+            <p>
+
+For every purchase you make, we will ensure there are no damages or
+faults and we will check and test the pitch of your instrument..</p>
+          </div>
+             </div>
+        </section>
+         
+        
+          
+        <section id="how-it-works">
+<iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+</section>
+        <section id="pricing">
+<div class="product" id="tenor">
+<div class="level">Tenor Trombone</div>
+<h2>$600</h2>
+<ol>
+<li>Lorem ipsum.</li>
+<li>Lorem ipsum.</li>
+<li>Lorem ipsum dolor.</li>
+<li>Lorem ipsum.</li>
+</ol>
+<button class="btn">Select</button>
+</div>
+<div class="product" id="bass">
+<div class="level">Bass Trombone</div>
+<h2>$900</h2>
+<ol>
+<li>Lorem ipsum.</li>
+<li>Lorem ipsum.</li>
+<li>Lorem ipsum dolor.</li>
+<li>Lorem ipsum.</li>
+</ol>
+<button class="btn">Select</button>
+</div>
+<div class="product" id="valve">
+<div class="level">Valve Trombone</div>
+<h2>$1200</h2>
+<ol>
+<li>Plays similar to a Trumpet</li>
+<li>Great for Jazz Bands</li>
+<li>Lorem ipsum dolor.</li>
+<li>Lorem ipsum.</li>
+</ol>
+<button class="btn">Select</button>
+</div>
+</section>
+          </div>
+        
+        <footer>
+<ul>
+<li><a href="#">Privacy</a></li>
+<li><a href="#">Terms</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+<span>Copyright 2016, Original Trombones</span>
+</footer>
+      
+      
+
+        
+    
+    </div>
+    </body>
+</html>
