@@ -1,2 +1,2 @@
 # FreecodeCamp
-Free Code Camp Responsive Web pages 
+It consistes of multiple responsive web pages with simple design templates to practice.
